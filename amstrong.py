@@ -1,12 +1,13 @@
 #  this program checks if a given number is amstrong or not
 
-num=int(input('enter a number::'))          
+num=int(input('enter a number::')) 
+count=len(str(num))         
 num_1=num
 sum=0
 temp=0
 while num>0:
     temp=num%10
-    sum=sum+temp**3
+    sum=sum+temp**count
     num//=10
 
 if num_1==sum:
@@ -25,9 +26,10 @@ amstrong=['amstrong numbers in range',lower,upper,'are']
 for num in range(lower,upper+1):
     sum=0
     temp=num
+    count=len(str(num))
     while(temp>0):
         digit=temp%10
-        sum=sum+digit**3
+        sum=sum+digit**count
         temp//=10
     if num==sum:
         #print(num)
